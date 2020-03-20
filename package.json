@@ -1,0 +1,36 @@
+{
+  "name": "dr-coding-standards-demo",
+  "version": "1.0.0",
+  "description": "Demo setup for WDS Coding Standards (per project configuration).",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:all",
+    "lint:all": "npm run lint:php && npm run lint:scripts && npm run lint:styles",
+    "lint:php": "composer run lint:php",
+    "lint:php-compat": "composer run lint:php-compat",
+    "lint:phpcs": "composer run lint:phpcs",
+    "lint:scripts": "npm run lint:js",
+    "lint:js": "./node_modules/.bin/eslint ./plugins/dr-coding-standards-test/**/*.js || echo lint:js faild for some file(s).",
+    "lint:styles": "npm run lint:css && npm run lint:scss",
+    "lint:css": "./node_modules/.bin/stylelint ./plugins/dr-coding-standards-test/**/*.css || echo lint:css faild for some file(s).",
+    "lint:scss": "./node_modules/.bin/sass-lint --config=./node_modules/@webdevstudios/css-coding-standards/.sass-lint.yml ./plugins/dr-coding-standards-test/**/*.scss --verbose"
+  },
+  "author": "Dave Romsey",
+	"license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/"
+  },
+  "devDependencies": {
+    "@webdevstudios/js-coding-standards": "^1.0.2",
+    "@webdevstudios/css-coding-standards": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "@webdevstudios/js-coding-standards"
+  },
+  "sasslintConfig": "node_modules/@webdevstudios/css-coding-standards/.sass-lint.yml",
+  "stylelint": {
+    "extends": "stylelint-config-wordpress",
+    "ignoreFiles": "**/*.scss"
+  }
+}
