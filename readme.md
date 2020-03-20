@@ -15,7 +15,7 @@ Instructions for setting up VS Code to run real time linting have also been incl
 - Create a fresh WordPress install using Local by Flywheel, for example.
 - Rename the `wp-content` directory to `wp-content-backup` temporarily.
 - Clone this repo to a new `wp-content` directroy.
-- Copy any of the contents from `wp-content-backup` into the new `wp-content` directory.
+- Copy any of the themes or plugins you'd like to keep from `wp-content-backup` back into the new `wp-content` directory.
 - Navigate to `wp-content` and run `npm install` and `composer install` to install dependencies.
 - Run `npm run lint` to perform all linting tasks. Linting errors will be generated for the example PHP, JS, CSS, and Sass files included in the demo setup.
 
@@ -47,17 +47,17 @@ The following changes have been made to Composer scripts inside of `composer.jso
 
 # VS Code Setup
 
-Tested using fresh install of VS Code in standalone mode.
+Tested using fresh install of VS Code in standalone mode. Linting will be applied automatically to PHP, JS, CSS, and Sass files.
 
-Required VS Code extensions and their authors:
+## Required VS Code extensions
 
-- ESLint (Dirk Baeumer)
-- phpcs (Ioannis Kappas)
-- stylelint (stylelint)
-- Sass Lint (glen-84)
+- [ESLint (Dirk Baeumer)](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [phpcs (Ioannis Kappas)](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
+- [stylelint (stylelint)](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Sass Lint (glen-84)](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
 
 
-VS Code `settings.json`:
+## VS Code `settings.json`
 
 ```
 	{
