@@ -16,10 +16,13 @@
     "lint:scss": "./node_modules/.bin/sass-lint --config=./node_modules/@webdevstudios/css-coding-standards/.sass-lint.yml ./plugins/dr-coding-standards-test/**/*.scss --verbose"
   },
   "author": "Dave Romsey",
-	"license": "ISC",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/"
+  },
+  "dependencies": {
+    "eslint": "~6.1.0"
   },
   "devDependencies": {
     "@webdevstudios/js-coding-standards": "^1.0.2",
