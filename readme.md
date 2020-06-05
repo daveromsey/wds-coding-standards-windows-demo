@@ -54,7 +54,7 @@ Tested using fresh install of VS Code in standalone mode. Linting will be applie
 - [ESLint (Dirk Baeumer)](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [phpcs (Ioannis Kappas)](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
 - [stylelint (stylelint)](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-- [Sass Lint (glen-84)](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
+- [stylelint (stylelint)](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
 
 ## VS Code `settings.json`
@@ -82,7 +82,7 @@ Tested using fresh install of VS Code in standalone mode. Linting will be applie
 		},
 		// "eslint.debug": true, // For debugging ESLint issues.  See Output Console -> ESLint
 
-		"sasslint.enable": true,
+		"stylelint.enable": true,
 		"css.validate": false,
 		"scss.validate": false,
 		"less.validate": false
