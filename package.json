@@ -31,9 +31,7 @@
   "eslintConfig": {
     "extends": "@webdevstudios/js-coding-standards"
   },
-  "sasslintConfig": "node_modules/@webdevstudios/css-coding-standards/.sass-lint.yml",
   "stylelint": {
-    "extends": "stylelint-config-wordpress",
-    "ignoreFiles": "**/*.scss"
+    "extends": "stylelint-config-wordpress"
   }
 }
