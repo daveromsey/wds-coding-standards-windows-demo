@@ -12,8 +12,8 @@
 			"lint": "composer run lint:all",
 			"lint:all": "composer run lint:php",
 			"lint:php": "composer run lint:php-compat && composer run lint:phpcs",
-			"lint:php-compat": "phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.2 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=-1 || true || exit",
-			"lint:phpcs": "phpcs -d memory_limit=-1 --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*' ./plugins/dr-coding-standards-test || true || exit",
+			"lint:php-compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.2 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=-1 || true || exit",
+			"lint:phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*' ./plugins/dr-coding-standards-test || true || exit",
 			"debug:phpcs": "which phpcs && phpcs -i"
 		},
     "require-dev": {
